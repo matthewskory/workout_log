@@ -1,0 +1,24 @@
+{
+  "name": "workout_log_client",
+  "description": "A workout log for logging workouts",
+  "main": "index.js",
+  "authors": [
+    "msk"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/matthewskory/workout_log",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2"
+  }
+}
