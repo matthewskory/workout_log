@@ -14,12 +14,12 @@ app.use(require('./middleware/validate_session'));
 
 //create user.js route
 app.use('/api/user', require('./routes/user'));
-
 //create definition.js
 app.use('/api/definition', require('./routes/definition'));
-
 //login route
 app.use('/api/login', require('./routes/session'));
+//log route
+app.use('/api/log', require('./routes/log'));
 
 //opens an api end point for the request sent to the api/test site
 app.use('/api/test', function(req, res){

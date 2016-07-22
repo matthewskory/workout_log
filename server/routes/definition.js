@@ -1,8 +1,8 @@
 var router = require('express').Router();
-var sequelize = require('../db.js');
+var sequelize = require('../db');
 var Definition = sequelize.import('../models/definition');
 
-
+// create definition
 router.post('/', function(req, res) {
     var description = req.body.definition.desc;
     var logType = req.body.definition.type;
@@ -12,25 +12,35 @@ router.post('/', function(req, res) {
         description: description,
         logType: logType,
         owner: owner
-
-    }).then(
+    })
+    .then(
         function createSuccess(definition) {
             res.json({
-                definition: definition,
-                message: 'created'
+                definition: definition
             });
         },
         function createError(err) {
             res.send(500, err.message);
         }
     );
-
 });
 
-//fetch definitions by userID
-//router.get('/', function(req, res) {
+//fetch definitions by userid
+router.get('/', function(req, res) {
+    var owner = req.user.id; //shortify
+    Definition
+    .findAll({
+            where: { owner: owner }
+        })
+    .then(
+        function findAllSuccess(data) {
+            res.json(data);
+        },
+        function findAllError(err) {
+            res.send(500, err.message); 
+        }
+    );
 
-
-// });
+});
 
 module.exports = router;

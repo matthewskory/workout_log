@@ -1,5 +1,6 @@
+//Sets up a new 
 var Sequelize = require('sequelize');
-
+							
 var sequelize = new Sequelize('workoutlog', 'postgres', 'sql', {
 	host: 'localhost',
 	dialect: 'postgres'	
