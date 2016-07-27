@@ -36,6 +36,10 @@ $(document).ready(function() {
 		if (target ==="#history"){
 		WorkoutLog.log.setHistory();
 	}
+	// hides Welcome User on logout
+		if (target === "#home") {
+			$("#welcome").hide();
+		}
 	});
 
 
