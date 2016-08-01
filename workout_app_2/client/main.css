@@ -1,0 +1,35 @@
+h2 {
+	color: #fbfbfb;
+	font-size: 40px;
+}
+
+.nav nav-tabs {
+	color: #fbfbfb;
+	font-size: 25px;
+
+}
+
+body {
+	color: #fbfbfb;
+	font-size: 25px;
+	font-family: font-family: 'Bevan', cursive;
+	background-image: url("/img/workout-wallpaper.png");
+	/*	background-color: #7a7a7a;*/
+}
+ /*sign up modals*/
+.modal-header,
+.modal-footer,
+.modal-body {
+	background-color: #353535;
+	font-size: 15px;
+}
+
+#li_username,
+#li_password {
+	color: #353535;
+}
+
+ /*history tab*/
+li.list-group-item {
+	background-color: #353535;
+}
